@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Login - TrollBot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #7289da;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #5a6fb2;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login to Your Bot</h2>
+        <input type="text" id="botToken" class="input-field" placeholder="Enter your bot token">
+        <div class="button" onclick="loginBot()">Login</div>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <script>
+        function loginBot() {
+            const token = document.getElementById('botToken').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Simulate token validation (replace with actual validation logic)
+            if (token === "valid-token") {
+                errorMessage.textContent = '';
+                alert('Login successful!');
+                // Proceed with login logic
+            } else {
+                errorMessage.textContent = 'Invalid token. Please try again.';
+            }
+        }
+    </script>
+</body>
+</html>
